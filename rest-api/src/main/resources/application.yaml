@@ -1,0 +1,15 @@
+server:
+  port: 8082
+
+spring:
+  application:
+    name: rest-api
+  datasource:
+    username: sa
+    password: password
+    url: jdbc:h2:mem:cars
+  jpa:
+    generate-ddl: true
+
+client:
+  url: http://localhost:8080
