@@ -1,0 +1,17 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: auth-server
+  datasource:
+    username: sa
+    password: password
+    url: jdbc:h2:mem:users
+  jpa:
+    generate-ddl: true
+
+
+logging:
+  level:
+    org.springframework.security: trace
