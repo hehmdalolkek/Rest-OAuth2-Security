@@ -10,6 +10,11 @@ spring:
     url: jdbc:h2:mem:cars
   jpa:
     generate-ddl: true
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          jwk-set-uri: http://localhost:8081/oauth2/jwks
 
 client:
   url: http://localhost:8080
