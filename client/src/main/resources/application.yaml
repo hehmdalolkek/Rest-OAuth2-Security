@@ -1,0 +1,27 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: client
+  security:
+    oauth2:
+      client:
+        registration:
+          car-client:
+            provider: auth-server
+            client-id: car-client
+            client-secret: car-secret
+            client-authentication-method: client_secret_basic
+            authorization-grant-type: authorization_code
+            redirect-uri: http://localhost:8080/login/oauth2/code/{registrationId}
+            scope:
+              - editCars
+              - openid
+        provider:
+          auth-server:
+            issuer-uri: http://127.0.0.1:8081
+
+logging:
+  level:
+    org.springframework.security: trace

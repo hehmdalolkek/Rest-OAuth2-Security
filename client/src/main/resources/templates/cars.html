@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post" th:action="@{/cars/delete}">
+    <div th:each="car : ${cars}">
+        <input type="hidden" name="id" th:value="${car.getId()}">
+        <p th:text="${car.getId()}"></p>
+        <p th:text="${car.getBrand()}"></p>
+        <p th:text="${car.getModel()}"></p>
+        <p th:text="${car.getColor()}"></p>
+        <input type="submit" value="delete car">
+        <br>
+        <br>
+    </div>
+</form>
+</body>
+</html>
