@@ -7,8 +7,6 @@ import org.springframework.context.annotation.Bean;
 import ru.hehmdalolkek.restapi.dao.CarDao;
 import ru.hehmdalolkek.restapi.model.Car;
 
-import java.util.Set;
-
 @SpringBootApplication
 public class RestApiApplication {
 

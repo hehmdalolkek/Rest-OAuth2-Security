@@ -14,7 +14,7 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          jwk-set-uri: http://localhost:8081/oauth2/jwks
+          jwk-set-uri: http://127.0.0.1:8081/oauth2/jwks
 
 client:
   url: http://localhost:8080
